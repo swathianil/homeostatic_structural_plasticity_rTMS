@@ -1,0 +1,15 @@
+# *.yaml file containing parameters relevant to experiment
+# Called by experiment script, master.py
+
+MSP_update_interval: 100 # update interval for MSP (ms)
+dt: 0.1  # stimulation resoultion, must be smaller than MSP_update_interval
+stim_poisson_factor: 1.0  # Enhance/deplete Poisson input by this factor
+stimulated_fraction: 0.1  # Factor of excitatory neurons to be stimulated
+TMS_amplitude: 3.0  # jobcall.sh specification overrides this
+TMS_pulse_duration: 0.5
+target_rate: 0.0078286  # target firing rate of neurons in kHz, precalculated for current network
+TMS_protocol: "simple_rTMS"
+total_num_virtual_procs: 20  # same as requested processes per node in jobcall.moab
+stimulation_cicle_dur: 1000.0  # timesteps for simulation during rTMS (float)
+TMS_stim_frequency: 10
+n_pulses: 900

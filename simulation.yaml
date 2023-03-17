@@ -1,0 +1,17 @@
+## Define parameters for the network simulation steps : Growth, Stimulation, Post-stimulation, Decay ##
+# Growth
+growth_time: 500000.0  # growth time (ms)
+cicles: 5  # cicles for recording during growth
+
+# Poisson stimulation
+stimulation_time: 20000.0
+stimulation_cicles: 10  # cicles for recording stimulation
+
+# Post stimulation
+post_stimulation_time: 500000.0
+post_stimulation_cicles: 50  # cicles for recording post stimulation
+
+# Decay
+decay_time: 200000.0
+decay_cicles: 4  # cicles for recording after post stimulation period
+

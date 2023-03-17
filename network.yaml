@@ -1,0 +1,45 @@
+## Define general parameters for the network ##
+
+# Parameters for asynchronous irregular firing
+g     :  8.0                         # ratio between maximum amplitude of EPSP and EPSP
+                                     # 8.0 in upscaled network
+eta   :  1.5                         # ratio between external rate and external frequency 
+                                     # needed for the mean input to reach                                            threshold in absence of feedback
+eps   :  0.1                         # connection probability for static connections (all but EE)
+order :  2500                        # order of network size: Change for upscaling network
+
+# Parameters of the integrate and fire neuron
+neuron_model :  'iaf_psc_delta'
+CMem         :  250.0                # membrane capacitance (pF)
+tauMem       :  20.0                 # membrane time constant (ms): 10.0 for upscaling
+
+theta        :  20.0                 # spike threshold (mV)
+t_ref        :  2.                   # refractory period (ms)
+E_L          :  0.                   # resting membrane potential (mV)
+V_reset      :  10.                  # reset potential of the membrane (mV)
+V_m          :  0.                   # initial membrane potential (mV)
+tau_Ca       :  10000.               # time constant for calcium trace (ms)
+J            :  0.1                  # postsynaptic amplitude in mV
+delay        :  1.                   # synaptic delay (ms)
+
+
+
+# Parameter for structural plasticity
+growth_curve  :  "linear"            # type of growth curve for synaptic elements
+slope         :  -0.5                # slope of growth curve for synaptic elements
+synapse_model :  "static_synapse"    # plastic EE synapse type
+min_delay     :  1.0
+max_delay     :  1.5
+
+
+# Parameter for synpatic elements' growth curve
+growth_curve_d    :  "linear"
+z0_mean           :  1.
+growth_curve_a    :  "linear"
+z0_std            :  .1
+
+
+
+# Parameter for structural plasticity synapse model
+synapse_model :  "static_synapse"
+

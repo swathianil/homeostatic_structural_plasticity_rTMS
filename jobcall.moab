@@ -1,0 +1,21 @@
+#!/bin/bash
+#MOAB -N ARRAYJOB
+
+
+#MSUB -l walltime=00:20:00:00
+#MSUB -l pmem=6000mb
+#MSUB -l nodes=5:ppn=20
+
+module load mpi/openmpi/4.0-gnu-9.2 
+module load neuro/nest/2.20.0 
+
+mpirun python3 ${whereami}/${script} ${whereami} ${experiment} ${amplitude} ${stim} ${seed}
+
+: '
+This script is called via jobcall.sh
+Interacts with job scheduler for job submission. 
+
+Specify walltime, memory, number of nodes, and processors per node as needed.
+Dependencies: nest 2.20.0, openmpi v4.0, python3
+    
+'
