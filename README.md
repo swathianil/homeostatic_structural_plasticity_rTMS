@@ -1,30 +1,34 @@
 # Repetitive transcranial magnetic stimulation (rTMS) triggers dose-dependent homeostatic rewiring in recurrent neuronal networks
+Swathi Anil, Han Lu, Stefan Rotter, Andreas Vlachos
 
-This repository consists of HPC-ready version of codes for Project Network. The project aims to apply tetanic electrical current injection-like stimulation onto a recurrent neuron network, that follows structural plasticity rules based on firing-rate homeostasis. 
+This repository consists of HPC-ready code used for the simulations in the paper.
+
+The project aims to apply tetanic electrical current injection-like stimulation onto a recurrent neuron network, that follows structural plasticity rules based on firing-rate homeostasis. 
+Simulations were carried out using bwForCluster NEMO and job scripts have been implemented to suit the MOAB workload manager. 
 
 ## Instructions
-Every condition consists of a package of data collection and analysis scripts. These include:
+Each experiment (stimulation condition) consists of a package of scripts for data collection and analysis. These include:
 
 MAIN:
- - *.sh shell script to run the condition through stages of growth, stimulation, post-stimulation and decay. (1)
- - *an.sh shell script to run analyses on the four stages, split into four different *.moab job calls (2)
+ - jobcall.sh shell script to run the condition through the network stages of growth, stimulation, post-stimulation and decay. (1)
+ - analysis.sh shell script to run analyses on the four stages, excecuted via four different *.moab job calls 
 
 PERIPHERAL: 
- - *.py data collection script (eg.,100Hz80kpA.py) (3)
- - Four *.py analyses scripts  (eg., 100gr.py, 100stim.py, 100post.py, 100decay.py) (4)
+ - master.py data collection script 
+ - analysis.py analyses scripts 
  - *.yaml files for importing parameters: simulation.yaml, Experiment.yaml, network.yaml
- - *.moab script for jobcall assistance 
+ - jobcall.moab for job submission via jobcall.sh
+ - analysis.moab for job submission via analysis.sh 
 
- In order to run a condition, run the respective (1) *.sh file.
- If you need to customise parameters (except amplitude), you can do so in the (3) *.py script, after the *.yaml files are unpacked. Be sure to then update it on all the analyses (4) *.py files as well.
- The amplitude is passed in via the shell script and it can be modified there. Be sure to change the job name as well.
- Parameters with absolute values are in the *.yaml files. Others that are deriviatives are within (1)
- 
+ In order to run a condition, populate and run the jobcall.sh script.
+ If you need to customise parameters, you can do so in the Experiment.yaml file. Stimulation times can be accessed in simulation.yaml.
+ Values in shell script override values in *.yaml
+
  ## Resource and requirements
  - Python v3.x
  - NEST v 2.2
  - yaml (available with Nemo python module)
- -Requested resources (relevant to HPC users):
+ -Requested resources (relevant to bwForCluster NEMO HPC users):
   - 5 nodes* 20 procs
   - Walltime ~ 20h for data collection
   
