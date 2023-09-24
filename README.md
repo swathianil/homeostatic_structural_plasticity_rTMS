@@ -33,5 +33,5 @@ PERIPHERAL:
   - Walltime ~ 20h for data collection
   
 ## Data
-Data available to plot the graphs in this paper can be found in the subfolder 'Data'
-Thejupyternotebook 'GraphPlotter' provides the code to plot the graphs using this data.
+Data supporting this preprint can be found at: https://doi.org/10.5281/zenodo.8374484
+The jupytern otebook 'GraphPlotter' in this repository can be used to interactively regenerate the figures available in this preprint.
