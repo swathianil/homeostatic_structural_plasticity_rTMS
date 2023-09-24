@@ -32,3 +32,6 @@ PERIPHERAL:
   - 5 nodes* 20 procs
   - Walltime ~ 20h for data collection
   
+## Data
+Data available to plot the graphs in this paper can be found in the subfolder 'Data'
+Thejupyternotebook 'GraphPlotter' provides the code to plot the graphs using this data.
