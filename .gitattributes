@@ -1,3 +1,1 @@
-*.py linguist-vendored=false
-*.sh linguist-vendored=false
-*.yaml linguist-vendored=false
+simulation_scripts/ linguist-vendored=false
