@@ -1,2 +1,2 @@
 simulation_scripts/* linguist-vendored
-*.py *.moab linguist-vendored
+*.py linguist-vendored
