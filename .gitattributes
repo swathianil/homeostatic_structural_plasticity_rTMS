@@ -1,5 +1,2 @@
 simulation_scripts/* linguist-vendored
-*.py linguist-vendored
-*.moab linguist-vendored
-*.sh linguist-vendored
-*.yaml linguist-vendored
+*.py *.moab linguist-vendored
