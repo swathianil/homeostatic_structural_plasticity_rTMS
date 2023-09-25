@@ -1,2 +1,2 @@
 simulation_scripts/* linguist-vendored
-*.py linguist-vendored
+*.py linguist-vendored=false
