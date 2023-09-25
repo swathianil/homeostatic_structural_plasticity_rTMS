@@ -9,11 +9,11 @@ Simulations were carried out using bwForCluster NEMO and job scripts have been i
 ## Instructions
 Each experiment (stimulation condition) consists of a package of scripts for data collection and analysis. These include:
 
-MAIN:
+### MAIN:
  - jobcall.sh shell script to run the condition through the network stages of growth, stimulation, post-stimulation and decay. (1)
  - analysis.sh shell script to run analyses on the four stages, excecuted via four different *.moab job calls 
 
-PERIPHERAL: 
+### PERIPHERAL: 
  - master.py data collection script 
  - analysis.py analyses scripts 
  - *.yaml files for importing parameters: simulation.yaml, Experiment.yaml, network.yaml
@@ -33,5 +33,6 @@ PERIPHERAL:
   - Walltime ~ 20h for data collection
   
 ## Data
-Data supporting this preprint can be found at: https://doi.org/10.5281/zenodo.8374484
+Data supporting this preprint can be found at: 
+https://doi.org/10.5281/zenodo.8374484
 The jupytern otebook 'GraphPlotter' in this repository can be used to interactively regenerate the figures available in this preprint.
